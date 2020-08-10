@@ -67,6 +67,9 @@ a {
     .header .barra-header .buscador-barra {
       grid-column-start: 12;
       grid-column-end: 13;
+      position: relative;
+      top: 0;
+      left: 0;
       justify-self: center;
       width: 40px;
       height: 40px;
@@ -74,7 +77,25 @@ a {
       border-radius: 50%;
       background: #242614;
       color: #F2F2F2;
-      text-align: center; }
+      text-align: center;
+      transition: all .8s ease; }
+      .header .barra-header .buscador-barra i {
+        cursor: pointer; }
+      .header .barra-header .buscador-barra input {
+        position: absolute;
+        top: 0;
+        right: 40px;
+        border-radius: 25px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 375px;
+        opacity: 1;
+        display: none;
+        height: 40px;
+        padding: 0px 25px;
+        color: #F2F2F2;
+        border: none;
+        background: #242614; }
   .header .banner-header {
     width: 100%;
     display: grid;
@@ -138,6 +159,20 @@ a {
           .header .banner-header .item-banner .focus-item .btn-focus:hover {
             border-radius: 10px; }
 
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    width: 0; }
+  to {
+    width: 375px;
+    opacity: 1; } }
+@keyframes desaparecer {
+  from {
+    opacity: 1;
+    width: 375px; }
+  to {
+    width: 0px;
+    opacity: 0; } }
 @media (max-width: 1199px) {
   .header .banner-header .item-banner {
     grid-column: span 4; }
