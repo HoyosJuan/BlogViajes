@@ -83,25 +83,27 @@ a {
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: 5px solid #485922; }
+    border-bottom: 5px solid #485922;
+    transition: all .8s ease;
+    position: relative;
+    top: 0;
+    left: 0; }
     .header .banner-header .item-banner {
       grid-column: span 3;
       height: 600px;
-      position: relative;
-      top: 0;
-      left: 0;
       border-left: 1px solid #aaa;
       background: rgba(0, 0, 0, 0.4);
-      transition: all 1s ease; }
-      .header .banner-header .item-banner:hover {
+      transition: all 1s ease;
+      display: grid;
+      align-content: flex-end;
+      transition: all .8s ease; }
+      .header .banner-header .item-banner:nth-child(1) {
         background: rgba(0, 0, 0, 0); }
-        .header .banner-header .item-banner:hover .focus-item {
+        .header .banner-header .item-banner:nth-child(1) .focus-item {
           transform: translateY(0%); }
       .header .banner-header .item-banner .focus-item {
-        position: absolute;
-        bottom: 0;
         width: 90%;
-        left: 5%;
+        margin: auto;
         background-color: rgba(0, 0, 0, 0.5);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -136,6 +138,11 @@ a {
           .header .banner-header .item-banner .focus-item .btn-focus:hover {
             border-radius: 10px; }
 
+@media (max-width: 1199px) {
+  .header .banner-header .item-banner {
+    grid-column: span 4; }
+    .header .banner-header .item-banner:nth-child(4) {
+      display: none; } }
 @media (max-width: 990px) {
   .header .barra-header .btn-mobil {
     display: block;
@@ -156,6 +163,11 @@ a {
   .header .barra-header .redes-barra {
     grid-column-start: 9;
     grid-column-end: 11; } }
+@media (max-width: 849px) {
+  .header .banner-header .item-banner {
+    grid-column: span 6; }
+    .header .banner-header .item-banner:nth-child(3) {
+      display: none; } }
 @media (max-width: 720px) {
   .header .barra-header .logo-barra {
     grid-column-start: 2;
@@ -169,6 +181,28 @@ a {
   .header .barra-header .buscador-barra {
     grid-column-start: 11;
     grid-column-end: 13; } }
+@media (max-width: 549px) {
+  .header .banner-header .item-banner {
+    grid-column: span 12; }
+    .header .banner-header .item-banner:nth-child(2) {
+      display: none; }
+  .header .banner-header .seleccionar-item {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .header .banner-header .seleccionar-item li {
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      transition: all .5s ease;
+      cursor: pointer; }
+      .header .banner-header .seleccionar-item li.select {
+        background: #fff; }
+      .header .banner-header .seleccionar-item li:hover {
+        background: #fff; } }
 @media (max-width: 466px) {
   .header .barra-header .logo-barra {
     grid-column-start: 2;
