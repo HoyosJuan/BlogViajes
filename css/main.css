@@ -245,7 +245,8 @@ a {
   .header .barra-header .redes-barra {
     font-size: 16px;
     grid-column-start: 7;
-    grid-column-end: 11; } }
+    grid-column-end: 11;
+    display: none; } }
 .main {
   padding: 50px 0px; }
   .main .contenedor {

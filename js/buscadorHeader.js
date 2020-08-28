@@ -11,8 +11,10 @@ btn.addEventListener('click', () => {
   }else{
     buscar.style.animation = 'desaparecer 1s ease'
     form.style.borderRadius = '50%'
-    buscar.style.borderTopRightRadius = '25px'
-    buscar.style.borderBottomRightRadius = '25px'
+    buscar.style.borderTopRightRadius = '0px'
+    buscar.style.borderBottomRightRadius = '0px'
+    buscar.style.borderTopLeftRadius = '25px'
+    buscar.style.borderBottomLeftRadius = '25px'
     setTimeout(() => {
       buscar.style.display = 'none'
     },1000) 
