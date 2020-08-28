@@ -12,7 +12,7 @@
 
   <header class='header'>
     <nav class='barra-header'>
-      <div class='btn-mobil'>
+      <div class='btn-mobil' id='btnMobil'>
         <i class="fas fa-bars"></i>
       </div>
       <div class='logo-barra'>
@@ -95,6 +95,26 @@
       </ul>
     </div>
   </header>
+
+  <div class="menu-fixed-mobile" id='menuMobile'>
+    <div class="btn-close" id='cerrarMobile'>
+      <i class="fas fa-times"></i>
+    </div>
+    <ul class="menu-mobile">
+      <li class='select-menu'>
+        <a href='#'>Inicio</a>
+      </li>
+      <li>
+        <a href='#'>Galeria</a>
+      </li>
+      <li>
+        <a href='#'>Suscribete</a>
+      </li>
+      <li>
+        <a href='#'>Contactame</a>
+      </li>
+    </ul>
+  </div>
 
   <main class='main'>
     <div class='contenedor'>
@@ -343,5 +363,6 @@
   <!-- Scripts -->
   <script src="./js/banner.js"></script>
   <script src="./js/buscadorHeader.js"></script>
+  <script src="./js/menuMobile.js"></script>
 </body>
 </html>
