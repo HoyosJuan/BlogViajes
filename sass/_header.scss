@@ -1,0 +1,318 @@
+.header{
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  .barra-header{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    .btn-mobil{
+      display: none;
+    }
+    .logo-barra{
+      grid-column: span 2;
+      font-size: 32px;
+      justify-self: center;
+      align-self: center;
+      font-weight: 700;
+      color:#aaa;
+      padding: 15px 8px;
+      span{
+        color:$primero;
+      }
+    }
+    .menu-barra{
+      grid-column-start: 4;
+      grid-column-end: 9;
+      li{
+        padding: 30px 20px;
+        transition: all 1s ease;
+        &.select-menu{
+          background-color: $primero;
+          a{
+            color:#fff;
+          }
+        }
+        a{
+          color:#aaa;
+          transition: all 1s ease;
+          font-weight: 500;
+        }
+        &:hover{
+          background-color: $primero;
+          a{
+            color:#fff;
+          }
+        }
+      }
+    }
+    .redes-barra{
+      grid-column-start: 10;
+      grid-column-end: 12;
+      justify-content: space-between;
+      li{
+        a{
+          font-size: 18px;
+          color: #aaa;
+          transition: all .5s ease;
+          &:hover{
+            color:$primero;
+          }
+        }
+      }
+    }
+    .buscador-barra{
+      grid-column-start: 12;
+      grid-column-end: 13;
+      position: relative;
+      top: 0;
+      left:0;
+      justify-self: center;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background: $cuarto;
+      color: $quinto;
+      text-align: center;
+      transition: all .8s ease;
+      i{
+        cursor: pointer;
+      }
+      input{
+        position: absolute;
+        top:0;
+        right:40px;
+        border-radius: 25px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        width: 375px;
+        opacity: 1;
+        display: none;
+        height: 40px;
+        padding: 0px 25px;
+        color: $quinto;
+        border: none;
+        background: $cuarto;
+        // animation: desaparecer 1s ease;
+      }
+    }
+  }
+  .banner-header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    background: url(../images/slider-1.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 5px solid $primero;
+    transition: all .8s ease;
+    position: relative;
+    top:0;
+    left:0;
+    .item-banner{
+      grid-column: span 3;
+      height: 600px;
+      border-left:1px solid #aaa;
+      background: rgba(0,0,0,.4);
+      transition: all 1s ease;
+      display: grid;
+      align-content: flex-end;
+      transition: all .8s ease;
+      &:nth-child(1){
+        background: rgba(0,0,0,0);
+        .focus-item{
+          transform: translateY(0%);
+        }
+      }
+      .focus-item{
+        width: 90%;
+        margin:auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 30px 0;
+        text-align: center;
+        transition: all 1s ease;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+        color: white;
+        transition: all 1s ease;
+        transform: translateY(150%);
+        p{
+          margin: 7px auto;
+        }
+        .categoria-focus{
+          width: 100%;
+          color: $tercero;
+          font-weight: 500;
+        }
+        .titulo-focus{
+          width: 100%;
+        }
+        .fecha-focus{
+          width: 100%;
+          color: #aaa;
+        }
+        .btn-focus{
+          padding: 15px;
+          margin:5px;
+          background:$primero;
+          color:$quinto;
+          transition: all .8s ease;
+          &:hover{
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes aparecer{
+  from{
+    opacity: 0;
+    width: 0;
+  }
+  to{
+    width: 375px;
+    opacity: 1;
+  }
+}
+@keyframes desaparecer{
+  from{
+    opacity: 1;
+    width: 375px;
+  }
+  to{
+    width: 0px;
+    opacity: 0;
+  }
+}
+@media(max-width:1199px){
+  .header{
+    .banner-header{
+      .item-banner{
+        grid-column: span 4;
+        &:nth-child(4){
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 990px){
+  .header{
+    .barra-header{
+      .btn-mobil{
+        display: block;
+        width: 100%;
+        font-size: 24px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        border-right:1.5px solid $quinto;
+        text-align: center;
+        padding: 15px 5px;
+        color:$cuarto;
+        cursor: pointer;
+      }
+      .logo-barra{
+        grid-column-start: 2;
+        grid-column-end: 5;
+      }
+      .menu-barra{
+        display: none;
+      }
+      .redes-barra{
+        grid-column-start: 9;
+        grid-column-end: 11;
+      }
+    }
+  }
+}
+@media(max-width:849px){
+  .header{
+    .banner-header{
+      .item-banner{
+        grid-column: span 6;
+        &:nth-child(3){
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 720px){
+  .header{
+    .barra-header{
+      .logo-barra{
+        grid-column-start: 2;
+        grid-column-end: 6;
+      }
+      .menu-barra{
+        display: none;
+      }
+      .redes-barra{
+        font-size: 16px;
+        grid-column-start: 8;
+        grid-column-end: 11;
+      }
+      .buscador-barra{
+        grid-column-start: 11;
+        grid-column-end: 13;
+      }
+    }
+  }
+}
+@media(max-width:549px){
+  .header{
+    .banner-header{
+      .item-banner{
+        grid-column: span 12;
+        &:nth-child(2){
+          display: none;
+        }
+      }
+      .seleccionar-item{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        li{
+          width: 10px;
+          height: 10px;
+          margin-right: 5px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.5);
+          transition: all .5s ease;
+          cursor: pointer;
+          &.select{
+            background: #fff;
+          }
+          &:hover{
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 466px){  
+  .header{
+    .barra-header{
+      .logo-barra{
+        grid-column-start: 2;
+        grid-column-end: 7;
+      }
+      .redes-barra{
+        font-size: 16px;
+        grid-column-start: 7;
+        grid-column-end: 11;
+        display: none;
+      }
+    }
+  }
+}
